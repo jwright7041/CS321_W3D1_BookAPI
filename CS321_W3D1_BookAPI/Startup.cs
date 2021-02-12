@@ -20,8 +20,7 @@ namespace CS321_W3D1_BookAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            services.AddControllers();
             // TODO: register the BookContext for injection using AddDbContext
 
             // TODO: register the BookService for injection using AddScoped
@@ -41,7 +40,11 @@ namespace CS321_W3D1_BookAPI
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
