@@ -10,7 +10,7 @@ namespace CS321_W3D1_BookAPI.Data
         // This method runs once when the DbContext is first used.
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // TODO: use optionsBuilder to configure a Sqlite db
+
         }
 
         // This method runs once when the DbContext is first used.
@@ -18,9 +18,10 @@ namespace CS321_W3D1_BookAPI.Data
         // model to the database. 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
             // TODO: configure some seed data in the books table
+            
+            base.OnModelCreating(modelBuilder);
+            
         }
 
     }
