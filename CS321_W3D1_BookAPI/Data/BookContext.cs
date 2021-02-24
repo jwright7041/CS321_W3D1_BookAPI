@@ -7,10 +7,9 @@ namespace CS321_W3D1_BookAPI.Data
     {
         // TODO: implement a DbSet<Book> property
 
-        // This method runs once when the DbContext is first used.
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public BookContext(DbContextOptions options) : base(options)
         {
-
+            
         }
 
         // This method runs once when the DbContext is first used.
